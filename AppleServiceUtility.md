@@ -13,8 +13,8 @@ Internal versions are distributed to Apple Authorized Service Providers and Inde
 The installer scripts in the `Apple Service Utility Customer.pkg` reveal that the "customer mode" is not the default behavior of the app or updater. As such, we can simply reverse the defaults it sets:
 
 ```
-% sudo defaults write com.apple.fielddiagnostics.appleserviceutility.updaterdTwo customerMode -bool NO
-% defaults write com.apple.fielddiagnostics.appleserviceutility.uiapp  customerMode -bool YES
+# defaults write com.apple.fielddiagnostics.appleserviceutility.updaterdTwo customerMode -bool NO
+% defaults write com.apple.fielddiagnostics.appleserviceutility.uiapp  customerMode -bool NO
 ```
 
 The customer mode is also stored at `/Users/Shared/AppleServiceUtility/SoftwareASU.plist`, but changing it manually appears to be unnecessary.
